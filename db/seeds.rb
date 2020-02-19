@@ -1,0 +1,5 @@
+Article.create(title: "A", content: "a")
+Article.create(title: "B", content: "b")
+Article.create(title: "C", content: "c")
+Article.create(title: "D", content: "d")
+Article.create(title: "E", content: "e")

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Articles</title>
+</head>
+<body>
+<h2>All the Articles</h2>
+    <ul>
+    <% Article.all.each do |page| %>
+        <li>
+        <a href='/articles/<%=page.id%>'><%= page.title %></a>
+        </li>
+    <% end %>
+    </ul>
+</body>
+
+</html>
