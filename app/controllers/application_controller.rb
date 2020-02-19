@@ -35,8 +35,18 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/:id/edit' do
-
+    id_number = params[:id]
+    @article = Article.find_by_id(id_number)
     erb :edit
+  end
+
+  put '/articles/:id/edit' do
+    title = params[:title]
+    content = params[:content]
+    @article.title = title
+    @article.content = content
+
+    redirect "articles/:id"
   end
 
 
