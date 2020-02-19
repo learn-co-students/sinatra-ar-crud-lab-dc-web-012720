@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show page</title>
+</head>
+<body>
+
+    <h2>Show page for <%= @article.title %></h2>
+
+    <div>
+        <%= @article.content %>
+    </div>
+
+    <a href="/articles/<%= @article.id %>/edit">Edit this article</a>
+    <a href="/articles">Back to Index Page</a>
+
+    <form action="/articles/<%=@article.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete this article">
+    </form>
+
+</body>
+</html>
