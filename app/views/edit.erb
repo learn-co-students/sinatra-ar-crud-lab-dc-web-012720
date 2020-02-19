@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit <%=@article.title%></title>
+</head>
+<body>
+
+<h2>Edit for <%=@article.title%></h2>
+
+<form action="/articles/<%=@article.id%>" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <input type="hidden" name="id" value="<%=@article.id%>">
+    
+    <label for="title">New title: </label>
+        <input type="text" name="title" value="<%=@article.title%>" >
+    <div>
+    <label for="content">New content: </label>
+        <input type="text" name="content" value="<%=@article.content%>"/>
+
+<input type="submit">
+
+</form>
+</body>
+</html>
