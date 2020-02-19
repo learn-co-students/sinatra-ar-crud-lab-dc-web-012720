@@ -40,10 +40,10 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  post '/articles/:id' do
+  patch '/articles/:id' do
     @title = params[:title]
     @content = params[:content]
-    @article = Article.all.find(params[:id])
+    @article = Article.find(params[:id])
     @article.update(title: @title, content: @content)
     erb :show
   end
