@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=@article.title%></title>
+</head>
+
+<body>
+    <h2><%=@article.title%></h2>
+    <h3>CONTENT: <%=@article.content%></h3>
+
+    <a href='/'><h1>GO BACK HOME</h1></a>
+    <a href='/articles/<%=@article.id%>/edit'><h1>EDIT ME</h1></a>
+    
+    <form action="/articles/<%=@article.id%>" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>
